@@ -1,38 +1,199 @@
-.App {
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+h1, h2 {
+  color: #a0522d; /* Henna-inspired brown */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #a0522d;
+  font-weight: bold;
+}
+
+/* Booking Form */
+.booking-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.booking-form h2 {
+  margin-bottom: 15px;
+}
+
+.booking-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1 1 calc(50% - 15px);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.form-group input, .form-group select, .location-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%; /* Ensures consistent width across inputs */
+  box-sizing: border-box; /* Includes padding and border in width calculation */
+}
+
+/* Location-specific style (optional, if further tweaking needed) */
+.location-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%; /* Aligns with other form inputs */
+  box-sizing: border-box;
+}
+
+.booking-form button {
+  padding: 10px 20px;
+  background-color: #a0522d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-form button:hover {
+  background-color: #8b4513;
+}
+
+/* Gallery */
+.gallery {
+  margin: 20px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.gallery-item p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.gallery-item a {
+  color: #a0522d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.gallery-item a:hover {
+  text-decoration: underline;
+}
+
+/* Booking List */
+.booking-list {
+  margin: 20px 0;
+}
+
+.booking-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.booking-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(33.333% - 15px);
+  text-align: left;
+}
+
+.booking-card p {
+  margin: 5px 0;
+}
+
+.booking-card button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-card button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.booking-card button:first-child {
+  background-color: #a0522d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.booking-card button:last-child {
+  background-color: #e74c3c;
+  color: white;
 }
